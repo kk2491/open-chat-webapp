@@ -1,0 +1,57 @@
+.manage-users-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+.user-info {
+    flex: 1;
+  }
+
+.user-actions button {
+    margin-left: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #4caf50;
+  }
+  
+.edit-user-modal {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+.modal-buttons {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+.modal-buttons button {
+    margin-left: 40px;
+    background-color: #4caf50;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
