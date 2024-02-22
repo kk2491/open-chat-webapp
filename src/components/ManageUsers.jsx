@@ -84,10 +84,22 @@ const ManageUsers = () => {
         {users.map((user) => (
           <li key={user.email} className="user-item">
             <div className="user-info">
-              <div>{user.name}</div>
-              <div>{user.email}</div>
-              <div>{user.phoneNumber}</div>
-              <div>{user.createdTimestamp}</div>
+              <div className="info-item">
+                <span className="info-label">Name : </span>
+                <span className="info-value">{user.name}</span>
+              </div>
+              <div>
+                <span className="info-label">Email : </span>
+                <span className="info-value">{user.email}</span>
+              </div>
+              <div>
+                <span className="info-label">Phone Number : </span>
+                <span className="info-value">{user.phoneNumber}</span>
+              </div>
+              <div>
+                <span className="info-label">Created on : </span>
+                <span className="info-value">{user.createdTimestamp}</span>
+              </div>
             </div>
             <div className="user-actions">
               <button onClick={() => editUser(user)}>Edit</button>

@@ -53,6 +53,8 @@ const SignUp = () => {
       saveRefreshToken(signUpOutput.data.refreshToken);
       saveTokenExpirationTimestamp(signUpOutput.data.tokenExpirationTime);
       console.log("successfully signed up");
+
+      navigate("/dashboard");
     } else {
       setError("Something went wrong, please try again");
     }
