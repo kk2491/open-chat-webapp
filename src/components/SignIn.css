@@ -38,19 +38,36 @@ input {
     margin-top: 6px;
   }
   
-.submit-button {
+.signin-submit-button {
     background-color: #4caf50;
-    color: white;
+    color: black;
     padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
-}
+    margin-bottom: 28px;
+  }
+
+.signin-signup-button {
+    background-color: #4caf50;
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+  }
   
-.submit-button:hover {
+.signin-submit-button:hover {
     background-color: #45a049;
+  }
+
+.signin-signup-button:hover {
+  background-color: #45a049;
   }
 
 .error-summary {

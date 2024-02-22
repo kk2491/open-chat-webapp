@@ -24,15 +24,16 @@ import "./App.css";
 function App() {
   return (
     <div className="app-container">
-      <h1 className="App-header">User Management</h1>
+      <h1 className="App-header">Open Chat</h1>
       <Router>
         <Routes>
+          <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/dashboard/invite" element={<InviteUser />} />
           <Route path="/dashboard/messages" element={<ChatMessage />} />
           <Route path="/dashboard/users" element={<ManageUsers />} />
-          <Route path="/" element={<SignUp />} />
+          <Route path="/" element={<SignIn />} />
         </Routes>
       </Router>
     </div>

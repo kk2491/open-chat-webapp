@@ -56,15 +56,10 @@ const SignIn = () => {
         signInOutput.data.tokenExpirationTime
       );
 
-      console.log("============");
       let temp1 = retrieveAccessToken();
-      console.log("temp1 : ", temp1);
       let temp2 = retrieveRefreshToken();
-      console.log("temp2 : ", temp2);
       let temp3 = retrieveUserId();
-      console.log("temp3 : ", temp3);
       let temp4 = retrieveTokenExpirationTimestamp();
-      console.log("temp2 : ", temp4);
 
       console.log("successfully signed in");
       navigate("/dashboard");
@@ -90,6 +85,11 @@ const SignIn = () => {
     }
   };
 
+  const handleSignUp = () => {
+    navigate("/signup");
+    return;
+  };
+
   return (
     <div className="signin-container">
       <h2>Sign In</h2>
@@ -111,8 +111,11 @@ const SignIn = () => {
             <p> Something went wrong, please try again</p>
           </div>
         )}
-        <button type="submit" className="submit-button">
+        <button type="submit" className="signin-submit-button">
           Sign In
+        </button>
+        <button type="button" className="signin-signup-button" onClick={handleSignUp}>
+          Don't have an account? Sign up here
         </button>
       </form>
     </div>

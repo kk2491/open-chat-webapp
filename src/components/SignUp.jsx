@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Joi from "joi";
 import { signUpService } from "../common/ApiServices";
 import { saveUserId, saveAccessToken, saveRefreshToken, saveTokenExpirationTimestamp } from "../common/Storage";
@@ -10,6 +11,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [reenterPassword, setReenterPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const signUpSchema = Joi.object({
     name: Joi.string().required(),
@@ -79,6 +81,10 @@ const SignUp = () => {
     }
   };
 
+  const handleSignIn = () => {
+    navigate("/signin");
+  };
+
   return (
     <div className="signup-container">
       <h2>Sign Up</h2>
@@ -112,8 +118,11 @@ const SignUp = () => {
             <p> Something went wrong, please try again</p>
           </div>
         )}
-        <button type="submit" className="submit-button">
+        <button type="submit" className="signup-submit-button">
           Sign Up
+        </button>
+        <button type="button" className="signup-signin-button" onClick={handleSignIn}>
+          Already have an account? Sign in here
         </button>
       </form>
     </div>
