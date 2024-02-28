@@ -1,0 +1,161 @@
+.managegroups-outer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+h3 {
+    text-align: start;
+  }
+
+.creategroup-button {
+    width: 200px;
+    height: 30px;
+    background-color: chartreuse;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    font-size: 15px;
+    border-width: 1px;
+  }
+
+.creategroup-button:hover {
+    background-color: aqua;
+  }
+
+.managegroups-container {
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15%;
+  }
+
+.managegroups-groups-layout {
+    padding: 20px;
+    /* border: 1px solid;
+    border-radius: 5px; */
+    border-right: 2px solid;
+  }
+
+.managegroups-group-list {
+    list-style: none;
+    padding: 0;
+  }
+
+.managegroups-group-item {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5%;
+  }
+
+.managegroups-group-item:hover {
+    background-color: chartreuse;
+  }
+
+.managegroups-group-item-selected {
+    background-color: chartreuse;
+  }  
+
+.managegroups-users-layout {
+    padding: 20px;
+    /* border: 1px solid;
+    border-radius: 5px; */
+  }
+
+.managegroups-user-list {
+    list-style: none;
+    padding: 0;
+  }
+
+.managegroups-user-item {
+    margin-bottom: 10px;
+    border-bottom: 2px;
+  }
+  
+/*
+.managegroups-button {
+    float: right;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+.managegroups-button:hover {
+    background-color: #0056b3;
+  }
+
+.managegroups-layout-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.managegroups-groups {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px; 
+    margin-right: 20px;
+  }
+
+.managegroups-groups h2 {
+    margin-bottom: 10px;
+  }
+
+.managegroups-grouplist {
+    list-style: none;
+    padding: 0;
+  }
+
+.managegroups-grouplist li {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+.managegroups-users {
+    width: 500px;
+  }
+
+.managegroups-users h2 {
+    margin-bottom: 10px;
+  }
+
+.managegroups-userlist {
+    list-style: none;
+    padding: 0;
+  }
+  
+.managegroups-userlist li {
+    margin-bottom: 5px;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+button:hover {
+    background-color: #0056b3;
+  } */

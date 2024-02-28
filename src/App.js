@@ -7,6 +7,7 @@ import Dashboard from "./components/Dashboard";
 import InviteUser from "./components/InviteUser";
 import ManageUsers from "./components/ManageUsers";
 import ChatMessage from "./components/ChatMessage";
+import ManageGroups from "./components/ManageGroups";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/dashboard/invite" element={<InviteUser />} />
           <Route path="/dashboard/messages" element={<ChatMessage />} />
           <Route path="/dashboard/users" element={<ManageUsers />} />
+          <Route path="/dashboard/groups" element={<ManageGroups />} />
           <Route path="/" element={<SignIn />} />
         </Routes>
       </Router>
