@@ -15,6 +15,7 @@ const ManageGroups = () => {
       try {
         let currentUserId = retrieveUserId();
         let groupsOutput = await getGroups(currentUserId);
+        console.log("groupsOutput => ", groupsOutput);
 
         if (groupsOutput.success) {
           setGroups(groupsOutput.groups);
@@ -59,13 +60,16 @@ const ManageGroups = () => {
           </ul>
         </div>
 
+        {/* Note: only name is being displayed
+            Any user fields can be added as future improvement */}
+
         <div className="managegroups-users-layout">
           <h3>Users</h3>
           <ul className="managegroups-user-list">
             {selectedGroup &&
-              selectedGroup.userIds.map((user) => (
+              selectedGroup.users.map((user) => (
                 <li className="managegroups-user-item" key={user}>
-                  {user}
+                  {user.name}
                 </li>
               ))}
           </ul>

@@ -263,7 +263,7 @@ export const getGroups = async (userId) => {
     let getGroupsOutput = null;
     let getGroupsEndpoint = apiUrl + "groups";
 
-    if (userId) getGroupsEndpoint = getGroupsEndpoint + "?userId=" + userId;
+    if (userId) getGroupsEndpoint = getGroupsEndpoint + "?userId=" + userId + "&includeUserDetails=true";
 
     let config = {
       headers: { Authorization: `Bearer ${accessToken}` },
