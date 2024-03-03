@@ -46,7 +46,9 @@ const ManageGroups = () => {
             {groups.map((group) => (
               <li
                 className={
-                  group.id == selectedGroup.id ? "managegroups-group-item managegroups-group-item-selected" : "managegroups-group-item"
+                  selectedGroup && group.id == selectedGroup.id
+                    ? "managegroups-group-item managegroups-group-item-selected"
+                    : "managegroups-group-item"
                 }
                 key={group.id}
                 onClick={() => handleGroupClick(group)}
