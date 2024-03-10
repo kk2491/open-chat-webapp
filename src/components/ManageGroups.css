@@ -28,7 +28,7 @@ h3 {
   }
 
 .creategroup-button:hover {
-    background-color: aqua;
+    background-color: #45a049;
   }
 
 .managegroups-container {
@@ -64,7 +64,7 @@ h3 {
   }
 
 .managegroups-group-item:hover {
-    background-color: chartreuse;
+    background-color: #45a049;
   }
 
 .managegroups-group-item-selected {
@@ -74,8 +74,6 @@ h3 {
 .managegroups-users-layout {
     padding: 20px;
     padding-top: 10px;
-    /* border: 1px solid;
-    border-radius: 5px; */
   }
 
 .managegroups-user-list {
@@ -87,4 +85,64 @@ h3 {
     border-bottom: 2px;
     padding-bottom: 5%;
   }
-  
+
+.create-new-group-layout {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    border : 1px;
+    padding: 20px;
+    background-color: #f4f4f4;
+ }
+
+.create-new-group-header {
+    text-align: center;
+    border-bottom: none;
+  }
+
+.create-group-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-width: 1px solid;
+  }
+
+.create-group-buttons {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    font-weight: bold;
+    margin-top: 60%;
+  }  
+
+.add-user-group-container-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+
+.add-user-group-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.add-user-group-container button {
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  font-weight: bold;
+}
+
+.add-user-group-container input {
+  padding: 10px 20px;
+  border-radius: 5px;
+}

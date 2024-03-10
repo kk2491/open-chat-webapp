@@ -288,6 +288,37 @@ export const getGroups = async (userId) => {
   }
 };
 
+export const createGroupServices = async (createGroupInput) => {
+  try {
+    await generateNewTokenIfExpired();
+    let accessToken = retrieveAccessToken("accessToken");
+
+    let createGroupOutput = null;
+    let createGroupEndpoint = apiUrl + "groups";
+
+    let config = {
+      headers: { Authorization: `Bearer ${accessToken}` },
+    };
+
+    try {
+      let createGroupResponse = await axios.post(createGroupEndpoint, createGroupInput, config);
+      createGroupOutput = {
+        success: true,
+        groups: createGroupResponse.data,
+      };
+    } catch (err) {
+      console.log("createGroupServices axios error : ", err);
+      createGroupOutput = {
+        success: false,
+      };
+    }
+
+    return createGroupOutput;
+  } catch (err) {
+    console.log("createGroupServices error : ", err);
+  }
+};
+
 export const getMessages = async (groupId) => {
   try {
     if (false) {
