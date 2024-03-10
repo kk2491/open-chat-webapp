@@ -39,6 +39,31 @@ const ManageGroups = () => {
   }, []);
 
   useEffect(() => {
+    const fetchGroupsOnCreation = async () => {
+      try {
+        console.log("XXXXXXXXx===XXXXXXXX");
+        if (fetchGroups) {
+          let currentUserId = retrieveUserId();
+          let groupsOutput = await getGroups(currentUserId);
+          console.log("groupsOutput => ", groupsOutput);
+
+          if (groupsOutput.success) {
+            setGroups(groupsOutput.groups);
+          } else {
+            setError("Something went wrong");
+          }
+          setFetchGroups(false);
+        }
+      } catch (err) {
+        console.log("fetchGroups error : ", err);
+        setError("Something went wrong");
+      }
+    };
+
+    fetchGroupsOnCreation();
+  }, [fetchGroups]);
+
+  useEffect(() => {
     const fetchUsers = async () => {
       try {
         let usersOutput = await getUsersService();
