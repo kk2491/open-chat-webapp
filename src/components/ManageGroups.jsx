@@ -125,6 +125,7 @@ const ManageGroups = () => {
     };
 
     let createGroupOutput = await createGroupServices(createGroupInput);
+    console.log("===== WE ARE HERE =====");
 
     if (createGroupOutput.success) {
       setCreateNewGroupPopup(false);
