@@ -41,7 +41,6 @@ const ManageGroups = () => {
   useEffect(() => {
     const fetchGroupsOnCreation = async () => {
       try {
-        console.log("XXXXXXXXx===XXXXXXXX");
         if (fetchGroups) {
           let currentUserId = retrieveUserId();
           let groupsOutput = await getGroups(currentUserId);

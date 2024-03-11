@@ -99,28 +99,30 @@ const ChatMessage = () => {
         </ul>
       </div>
 
-      <div className="messages-container">
-        <h2>Messages</h2>
-        <ul className="message-list">
-          {messages.map((message) => (
-            <li key={message.id}>
-              <strong>{message.sender}</strong> {message.message}{" "}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {selectedGroup && (
-        <div className="new-message-form">
-          <textarea
-            rows={4}
-            placeholder="Type your message...!"
-            value={newMessage}
-            onChange={(e) => setNewMessage(e.target.value)}
-          ></textarea>
-          <button onClick={handleSendMessage}>Send</button>
+      <div className="messages-outer-container">
+        <div className="messages-container">
+          <h2>Messages</h2>
+          <ul className="message-list">
+            {messages.map((message) => (
+              <li key={message.id}>
+                <strong>{message.sender}</strong> {message.message}{" "}
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+
+        {selectedGroup && (
+          <div className="new-message-form">
+            <textarea
+              rows={4}
+              placeholder="Type your message...!"
+              value={newMessage}
+              onChange={(e) => setNewMessage(e.target.value)}
+            ></textarea>
+            <button onClick={handleSendMessage}>Send</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
